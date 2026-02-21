@@ -99,8 +99,8 @@ const DEFAULT_LANGUAGES: Language[] = [
  */
 export function createBrandConfig(options: BrandModuleOptions = {}): BrandModule {
     const {
-        brand = {},
-        regional = {},
+        brand = {} as Partial<BrandConfig>,
+        regional = {} as NonNullable<BrandModuleOptions['regional']>,
         currencies = DEFAULT_CURRENCIES,
         languages = DEFAULT_LANGUAGES,
         marketingLanguages = DEFAULT_LANGUAGES,
